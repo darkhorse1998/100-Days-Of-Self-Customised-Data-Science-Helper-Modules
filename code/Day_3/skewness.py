@@ -52,7 +52,7 @@ def skew_stats(df_col):
         max_occur = list(df_col.value_counts().index)[0]
         if pct_max_occur > 0.80:
             print(f"{df_col} :: Entry : {max_occur} --> {pct_max_occur*100}%")
-        print("Standard Deviation of {} --> {}".format(df_col, df_col.values.std()))
+        print("Standard Deviation --> {}".format(df_col.values.std()))
 
     except Exception as e:
         print(e)
