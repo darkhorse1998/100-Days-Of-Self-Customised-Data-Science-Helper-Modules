@@ -59,7 +59,7 @@ def skew_stats(df_col):
         print("This function takes a single Pandas Series column.")
 
 
-def transform(df_col,deails=False):
+def transform(df_col,details=False):
 
     """
     Input: df_col --> Pandas Series Data
