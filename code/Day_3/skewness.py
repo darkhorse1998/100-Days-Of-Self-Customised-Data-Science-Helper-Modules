@@ -83,7 +83,7 @@ def transform(df_col,details=False):
 
     try:
         initial_skew = df_col.skew()
-        print("Initial Skewness --> ".format(initial_skew))
+        print(f"Initial Skewness --> {initial_skew}")
         if initial_skew > 0:
 
             Transformations = [
