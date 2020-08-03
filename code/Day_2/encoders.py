@@ -18,8 +18,16 @@ def suggest_encoding(dfs):
     print(f"Number of Unique Entries : {cats_count}")
     print(f"Percentage of Unique Entries : {(cats_count/total)*100}")
 
-    if (cats_count/total)*100 > 75.00:
-        print("")
+    if (cats_count/total) > 0.90:
+        print(f"Column --> {dfs} : Unique Values Percentage --> {round((cats_count/total)*100,2)}")
+        prit("If it is a categorical column, better drop it.")
+
+    if cats_count > 5 and dfs.dtypes not in [int, float]:
+        print("Order of Preference of Encoding: ")
+        print("1. Label Encoding --> Binary Encoding\n2. One Hot Encoding")
+
+    if cats_count<5:
+        print("Better to go for One Hot Encoding if xgboost is supposed to be applied")
 
 def oneHotEncoding(df):
     """

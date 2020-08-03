@@ -166,3 +166,17 @@ def transform(df_col,details=False):
     except Exception as e:
         print(e)
         print("This function takes a single Pandas Series column.")
+
+# def box_cox(df_col):
+#
+#     try:
+#         skewness = df_col.skew()
+#         box_cox_range = np.arange(-5,5,0.001)
+
+
+
+
+
+    except Exception as e:
+        print(e)
+        print("This function takes a single Pandas Series column.")
